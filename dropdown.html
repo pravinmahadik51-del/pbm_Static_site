@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Table Rows</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<table border="1" id="myTable">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+
+    <tr>
+        <td>Fahad</td>
+        <td>20</td>
+    </tr>
+
+    <tr>
+        <td>Ayush</td>
+        <td>25</td>
+    </tr>
+
+    <tr>
+        <td>Vikrant</td>
+        <td>21</td>
+    </tr>
+
+    <tr>
+        <td>Rahul</td>
+        <td>23</td>
+    </tr>
+</table>
+
+<br>
+
+<button id="deleteRows">Delete Rows</button>
+
+<script>
+$(document).ready(function () {
+
+    $("#deleteRows").click(function () {
+
+        $("#myTable tr:gt(1)").remove();
+
+    });
+
+});
+</script>
+
+</body>
+</html>
